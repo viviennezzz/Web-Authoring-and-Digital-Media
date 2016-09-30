@@ -1,2 +1,2 @@
-# webAuthoring
-Class Projects
+# Web Authoring
+Classwork for simple practice
