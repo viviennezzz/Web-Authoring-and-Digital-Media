@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  <title>Customer Survey</title>
+</head>
+<style>
+  body {
+    background-color: maroon;
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+  }
+  
+  img {
+    height: 200ox;
+    width: 200px;
+  }
+  
+  div {
+    background-color: navy;
+    color: maroon;
+    font-size: 24pt;
+  }
+</style>
+
+<body>
+  <h2><b> Customer Service</b></h2>
+  <h5>Please take a few moments to complete this survey</h5>
+  <img src="https://ae01.alicdn.com/kf/HTB1KemRJVXXXXbnXFXXq6xXFXXXp/New-Fashion-Unisex-5-Colors-Women-font-b-Men-b-font-Polyester-font-b-Scarf-b.jpg">
+  <p></p>
+  <form action="mailto: xz15682n@pace.edu?subject=TravelInfo" method="post">
+
+    <fieldset>
+      <legend>
+        Basic Information
+      </legend>
+      First Name <input type="text" name="fname"><br> 
+      Last Name <input type="text" name="lname">
+      <p></p>
+      Gender<br>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="Female" checked>Female
+      <input type="radio" name="gender" value="other">Other
+      <p></p>
+      Age<br>
+      <input type="radio" name="age" value="18-22">18-22
+      <input type="radio" name="age" value="23-31" checked>23-31
+      <input type="radio" name="age" value="32-35">32-35
+      <input type="radio" name="age" value="36-44">36-44
+      <input type="radio" name="age" value="45+">45+
+      <p></p>
+      How would you describe your personal style?<br>
+      <input type="checkbox" name="Simple" value="Simple">Simple
+      <input type="checkbox" name="Sexy" value="Sexy">Sexy
+      <input type="checkbox" name="Romantic" value="Romantic">Romantic
+      <input type="checkbox" name="Classic" value="Classic">Classic
+      <input type="checkbox" name="Playful " value="Playful ">Playful
+      <input type="checkbox" name="Elegant" value="Elegant">Elegant
+      <input type="checkbox" name="Casual" value="Casual">Casual
+    </fieldset>
+    <div>
+      <h3><b>Questions</b></h3>
+    </div>
+    <fieldset>
+      What is your ideal price for luxury scarf?
+      <select name="idealPrice">
+        <option value="$100-$200">$100-$200</option>
+        <option value="$201-$300">$201-$300</option>
+        <option value="$301-$400">$301-$400</option>
+        <option value="$401-500">$401-$500</option>
+        <option value="$501+">$501+</option>
+      </select>
+    </fieldset>
+    <br>
+    <fieldset>
+      Which brand of scarf have you purchased?
+      <select name="brand" multiple>       
+        <option value="Acne Studios">Acne Studios</option>
+        <option value="Alexander McQueen">Alexander McQueen</option>
+        <option value="Burberry">Burberry</option>
+        <option value="Chanel">Chanel</option>
+        <option value="Givenchy">Givenchy</option>
+        <option value="Saint Laurent">Saint Laurent</option>
+        <option value="Valentino">Valentino</option>
+       </select>
+    </fieldset>
+    <br>
+    <fieldset>
+      How do you shop for accessories?
+      <select>
+       <optgroup label="Way to shop">Way to shop</optgroup>
+        <option>Online</option>
+        <option>In-store</option>
+        <option>Both</option>
+        </select>
+    </fieldset>
+    <br>
+    <fieldset>
+      Please leave any additional comments here.
+      <br>
+      <textarea rows="4" cols="50">
+    </textarea>
+    </fieldset>
+
+    <input type="submit" onclick="alert('Thank you for submitting your information')" name="submitBut" value="Send Information">
+    <input type="reset" name="resetBut" value="Reset Information">
+  </form>
+</body>
+
+</html>
