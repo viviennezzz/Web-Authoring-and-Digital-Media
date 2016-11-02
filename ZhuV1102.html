@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Calculations</title>
+    <style>
+       body
+      {
+        background-color: teal;
+        color: brown;
+        font-size: 20pt;  
+      }
+    
+      img 
+      {
+        height: 300px;
+        wideth: 300px;
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    <h2>All about the calculations</h2>
+    <!-- Show a calculator here -->
+    <img src = "https://investmentproperty.co.uk/wp-content/uploads/2015/11/property-investment-calculator-large.jpg">
+    <!--2 calculations,
+    How old are you in days and create your class schedule in html/
+javascript with a calculated GPA-->
+    <script>
+     var age = parseInt(prompt("How old are you today?"));
+      document.write("<br>I am " + age + " years old."); 
+      
+     var age2 = parseInt(prompt("How old is the second person?"));
+      document.write("<br>The second person is " + age2);
+      
+      document.write("<br>The total of the 2 ages are: " + (age+age2));
+      
+      var ageDay = age * 365;
+      var ageDecadess = age/10;
+      
+      document.write("<br>I am also " + ageDay + " days old.");
+      document.write("<br>and I am also " + ageDecadess + " decades old.<br><hr>");
+      
+      var className1 = prompt("What is your first class", "Chemistry");
+      var class1 = parseFloat(prompt("What is your GPA for " + className1, "3.2"));
+      document.write("My GPA for " + className1 + " is " + class1);
+   
+      var className2 = prompt("What is your second class", "Math");
+      var class2 = parseFloat(prompt("What is your GPA for " + className2, "4.0"));
+      document.write("<br>My GPA for " + className2 + " is " + class2);
+    
+      var className3 = prompt("What is your third class", "Computer Science");
+      var class3 = parseFloat(prompt("What is your GPA for " + className3, "3.85"));
+      document.write("<br>My GPA for " + className3 + " is " + class3);
+      
+      var avgGPA = (class1 + class2 + class3)/3;
+      document.write("<br>My overall GPA is " + avgGPA.toFixed(2));
+      
+
+    
+    </script>
+          
+    <p>
+  
+    <table border="1">
+      <tr>
+        <th>Class</th>
+        <th>GPA</th>
+        <th>Average GPA</th>
+      </tr>
+            <tr>
+              <td><script>document.write(className1)</script></td>
+              <td><script>document.write(class1)</script></td>
+              <td rowspan="3" ALIGN="CENTER"><script>document.write(avgGPA.toFixed(2))</script></td>
+            </tr>
+      <tr>
+        <td><script>document.write(className2)</script></td>
+        <td><script>document.write(class2)</script></td>
+            </tr>
+      <tr>
+        <td><script>document.write(className3)</script></td>       
+        <td><script>document.write(class3)</script></td>
+            </tr>
+    </table>
+    
+    </p>
+    
+  </body>
+  
+  
+  
+</html>
