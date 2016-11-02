@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Temperature Conversion</title>
+  <style>
+    body{
+      background-color: black;
+      font-size: 24pt;
+      color: green;
+      text-align: center;
+    }
+    img{
+      height: 350px;
+      width: 350px;
+    }
+  </style>
+  </head>
+  
+  <body>
+    
+    <h1>Temperature Conversion</h1>
+    
+    <img src="https://mgtvwnct.files.wordpress.com/2016/02/hot-and-old-clipart-1.jpg?w=650">
+    
+    <script>
+    var cTemp = prompt("Enter the temperature in celsius: ");
+      document.write("<br>The temperature in celsius is: " + cTemp);
+      
+      var fTemp = cTemp * 9/5 + 32;
+      
+      document.write("<br>The temperature in Fahrenheit is: " + fTemp);
+    
+    </script>
+  
+  </body>
+</html>
