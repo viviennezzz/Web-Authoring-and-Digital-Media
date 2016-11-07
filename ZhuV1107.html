@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>IF Statements</title>
+        </head>
+        <style>
+          body 
+          { 
+            background-color: grey; 
+            font-size: 18 pt; 
+          } 
+          img
+          {
+            height: 300px;
+            width: 400px;
+          }
+          .specialColor
+          { 
+            color: aqua; 
+            font-size: 36 pt; 
+          }
+          </style>
+          
+            <body>
+
+              <div class="specialColors">
+                Today is all about the IF statements
+                </div>
+
+                  <script>
+
+                    var myAge = parseFloat(prompt("How old are you", 34)); 
+                    document.write("You are " + myAge + " years old."); 
+                    var myGender = prompt("Are you male or female?", "male"); 
+                    document.write("<br>You are a " + myGender + "."); 
+                    if (myAge >= 21) 
+                    { 
+                      if (myGender == "male") 
+                      { 
+                        document.write("<br>Go order a beer on me."); 
+                        //document.write("<br>You are old enough to drink"); 
+                        //add a picture of a male holding a beer 
+                        document.write("<br><img src='https://thumbs.dreamstime.com/t/young-man-holding-pint-beer-isolated-white-background-41260813.jpg'>"); 
+                      } 
+                      if (myGender == "female") 
+                      {
+                        document.write("<br>Go have a mixed drink on me."); 
+                        //document.write("<br>You are old enough to drink"); 
+                        //add a picture of a female holding a cocktail 
+                        document.write("<br><img src='http://il9.picdn.net/shutterstock/videos/4925348/thumb/1.jpg'>"); 
+                      } 
+                    } 
+                    else if (myAge < 21 && (myGender=="female" || myGender=="male" )) 
+                    { 
+                      document.write("<br>You can't drink, go have some milk."); 
+                      document.write( "<br><img src='http://media.mercola.com/ImageServer/Public/2013/November/kids-milk-fb.jpg'>"); 
+                    } 
+                    else
+                    { document.write("<br>Invalid entry"); 
+                    } 
+                    </script>
+                      </body>
+                        </html>
