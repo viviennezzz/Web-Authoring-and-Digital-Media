@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>IFs and Switches</title>
+  </head>
+  
+  <style>
+  body
+    {
+      background-color: blue;
+      color: white;
+      font: 28pt;
+    }
+    
+    img
+    {
+      height: 300px;
+      width: 500px;
+    }
+  
+  
+  
+  </style>
+  <body>
+    <script>
+    document.write("All about IF stateents and switches and functions too.");
+    
+    /*write an if statement asking how much 
+    your ar cost, depending on the cost, 1 of 
+    2 statements about the cost of the car*/
+    
+    var carCost = parseFloat(prompt("How much does your car cost?", 30000));
+    document.write("<br>Your car costs " + carCost);
+    
+    if (carCost > 50000)
+    {
+    document.write("<br>That car costs way too much money.");
+    }
+    else if (carCost <= 50000 && carCost > 0)
+    {
+    document.write("<br>I think I can afford that car.");
+    }
+    else
+    {
+    document.write("<br>Please enter a valid number.");                    
+    }   
+      
+    document.write("<hr><h3>Pick your favourite color:</h3>");
+    document.write("<ol><li>Red</li><li>black</li><li>white</li></ol>");
+                         
+    /*List all colors available for the car, 
+    then using a switch, display the color of 
+    your car, but each switch will be 
+    redirected to a function. 4 different
+    switch cases, including the default.*/
+      
+     function redColor()
+     {
+       document.write("I am in the redColor function.");
+       document.write("<br><img src = 'http://fullhdpictures.com/wp-content/uploads/2016/06/Awesome-Red-Car-Wallpaper.jpg'>");
+     }
+      
+      function blackColor()
+     {
+       document.write("I am in the blackColor function.");
+       document.write("<br><img src = 'https://www.turtlewax.com/images/default-source/black-car-care-gallery/black_car_gal_04'>");
+     }
+      
+      function whiteColor()
+     {
+       document.write("I am in the whiteColor function.");
+       document.write("<br><img src = 'http://eskipaper.com/images/bmw-m5-f10-white-car-1.jpg'>");
+     }
+    
+     var pickColor = prompt("What color car do you want?", 1);
+     
+     switch (pickColor)
+     {
+     case "1": 
+      redColor();
+      document.write("<br>I have a red car."); 
+      break;
+     case "2":
+      blackColor();
+      document.write("<br>I have a black car");
+      break;
+     case "3":
+      whiteColor();
+      document.write("<br>I have a white car");
+      break;
+     default:
+      document.write("<br>Not a valid color");
+     }
+      
+      
+      
+    </script>
+  </body>
+</html>
