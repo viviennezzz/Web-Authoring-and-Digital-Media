@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Three Grade Calculation</title>
+  </head>
+  
+  <style>
+  body
+    {
+      background-color: white;
+      color: blue;
+      font: 28pt;
+    }
+    
+    img
+    {
+      height: 400px;
+      width: 400px;
+    }
+  
+  
+  
+  </style>
+  <body>
+    
+    <h1>Grade Calculation</h1>
+    
+    <script>
+    
+    var firstGrade = parseFloat(prompt("What is the first grade you got?", 90));
+    document.write("<br>The first grade you got is: " + firstGrade);
+      
+    var secondGrade = parseFloat(prompt("What is the second grade you got?", 80));
+    document.write("<br>The second grade you got is: " + secondGrade); 
+      
+    var thirdGrade = parseFloat(prompt("What is the third grade you got?", 95));
+    document.write("<br>The third grade you got is: " + thirdGrade);
+      
+    var averageGrade = (firstGrade + secondGrade + thirdGrade) / 3;
+    document.write("<br>Your average for your test scores is " + averageGrade.toFixed(2));
+    
+    
+      
+     function averageA()
+     {
+       document.write("<br>You got an A for the class.");
+       document.write("<br><img src = 'http://www.really-learn-english.com/image-files/xlettre_a0000.jpg.pagespeed.ic.6luzEdadoT.jpg'>");
+     }
+      
+      function averageB()
+     {
+       document.write("<br>You got a B for the class.");
+       document.write("<br><img src = 'http://www.lettercult.com/alphabattleB/angie_letter_b.jpg'>");
+     }
+      
+      function averageC()
+     {
+       document.write("<br>You got a C for the class.");
+       document.write("<br><img src = 'http://img03.blogcu.com/images/i/l/g/ilginchersey/638950245d2c1cedee2eef65ca32355a_1281810730.jpg'>");
+     }
+      
+     function averageD()
+     {
+       document.write("<br>You got a D for the class.");
+       document.write("<br><img src = 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=20381844'>");
+     }
+      
+      function averageF()
+     {
+       document.write("<br>You got an F for the class.");
+       document.write("<br><img src = 'https://www.twinkletwinklelittleone.com/images/dark%20green%20F.jpg'>");
+     }
+    
+     if (averageGrade >= 90)
+       {
+         averageA();
+       }
+      else if (averageGrade >= 80)
+        {
+          averageB();
+        }
+      else if (averageGrade >= 70)
+        {
+          averageC();
+        }
+      else if (averageGrade >= 60)
+        {
+          averageD();
+        }
+      else
+        {
+          averageF();
+        }
+      
+      
+    </script>
+  </body>
+</html>
