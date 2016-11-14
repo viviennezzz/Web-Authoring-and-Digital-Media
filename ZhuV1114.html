@@ -1,0 +1,107 @@
+<html>
+
+<head>
+  <title>Loops</title>
+  <style>
+    body
+    {
+    background-color: green;
+    color: yellow;
+    font-size: 24pt;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>It is all about the loop</h2>
+  
+  <ol>Which one do you want to try out?
+    <li>Heading Sizes</li>
+    <li>Inside the Loop</li>
+    <li>Picture Sizes</li>
+    <li>While Loop</li>
+    <li>Do-While Loop</li>
+  </ol>
+  
+<script>
+  
+  var option = prompt("Which one do you want to try out?");
+  document.write("You want to try out option " + option);
+  
+  switch(option)
+  {
+    case "1": 
+        headingSizes(); 
+        break;
+      case "2":  
+        inLoop(); 
+        break;
+      case "3": 
+        pictureSizes(); 
+        break;
+      case "4": 
+        whileLoop(); 
+        break;
+      case "5": 
+        doWhile(); 
+        break;
+      default: 
+        document.write("<br>Invalid input.");
+    }
+  
+  
+  
+  function headingSizes()
+  {
+  //using the largest heading "heading 1"
+  //using the 2nd largest heading "heading 2"
+  for(j=1; j<=6; j++)
+    {
+      document.write("<h" + j + ">Heading " + j + "</h" + j + ">");
+    }
+  }
+  
+  function inLoop()
+  {
+  for (i=0; i<5; i++)
+    {
+      document.write("<br>I am inside the loop.");
+      document.write(" The value of i is: " + i);
+      document.write("<br><img style='width: 200px; height:200px' src = 'https://upload.wikimedia.org/wikipedia/en/e/eb/The_Loop_logo.png'>");
+    }
+  }
+  
+  function pictureSizes()
+  {
+  for(m=100; m<=300; m+=50)
+    {
+      document.write("<img style='width:" + m + "px; height:" + m + "px' src = 'https://upload.wikimedia.org/wikipedia/en/e/eb/The_Loop_logo.png'>");
+    }
+  }
+  
+  function whileLoop()
+  {
+  n=4;
+  while(n<=5)
+    {
+      document.write("<br>while loop");
+      n++;
+    }
+  }
+  
+  function doWhile()
+  {
+  p=0;
+  do
+    {
+      document.write("<br>Inside the do while loop");
+      p++;
+    } while (p<10)
+   }
+  
+  document.write("<br>I am outside the loop");
+  </script>
+
+</body>
+
+</html>
