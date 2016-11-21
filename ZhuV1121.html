@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Grocery Store</title>
+  </head>
+  
+  <style>
+    
+  body
+    {
+      background-color: #008080;
+      color: #fff8dc;
+      font-size: 24pt;
+      text-align: center;
+    }
+    img
+    {
+      height: 300px;
+      width: 400px;
+    }
+    
+  </style>
+  
+  <body>
+    
+    <h1>Welcome to the Grocery Store</h1>
+    
+    <img src = "https://www.skinnymom.com/wp-content/uploads/2011/08/grocery-shopping.jpg" alt = "groceryStore">
+    
+    <script>
+      
+      var taxOrNot, cashOrNot, price, priceWithTax, subTotal = 0, totalPrice = 0; 
+      
+      threeItemsTotal();
+  
+    function threeItemsTotal()
+      {      
+        for(i=1; i<=3; i++)
+      {
+        price = parseFloat(prompt("What is the price of item " + i +"?"));
+        document.write("<br>The price of item " + i + " is: " + "$" + price);
+        salesTax();
+        subTotal += priceWithTax;
+      }
+        document.write("<br>The sub total of all 3 items after taxes is: $" + subTotal.toFixed(2));        
+        cashPayment();
+        document.write("<br>The total price is: $" + totalPrice.toFixed(2));   
+      }
+      
+   function salesTax()
+      {
+        taxOrNot = prompt("Does the item have a sales tax? Please enter either yes or no.");
+        if(taxOrNot == "yes")
+          {
+            document.write("<br>The item has a sales tax.");
+            priceWithTax = price * (1 + 0.05);
+          }
+        else if(taxOrNot == "no")
+          {
+            document.write("<br>The item does not have a sales tax.");
+            priceWithTax = price * (1 + 0);
+          }
+        else
+          document.write("<br>Invalid Input.");
+      }
+      
+      function cashPayment()
+      {
+        cashOrNot = prompt("Are you paying cash? Please enter either yes or no.");
+        if(cashOrNot == "yes")
+          {
+            document.write("<br>You recieve a 10% discount.");
+            totalPrice = subTotal * (1 - 0.1);
+          }
+         else if(cashOrNot == "no")
+          totalPrice = subTotal;
+        else
+          document.write("<br>Invalid Input.");        
+      }
+   
+    </script>
+    
+  </body>
