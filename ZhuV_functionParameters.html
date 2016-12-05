@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>FunctionsParameters</title>
+    <script>
+    function milesPerGallon (milesDriven, gallonsConsumed)
+      {
+        milesPerGallon = milesDriven/gallonsConsumed;
+      }  
+    </script>
+  </head>
+  
+  <style>
+    
+  body
+  {
+    background-color: #483D8B;
+    color: #DCDCDC;
+    font-size: 28pt;
+  }
+    
+  span
+  {
+    color: #1E90FF;
+  }
+  
+  </style>
+  
+  <body>
+
+    <script>
+      var milesPerGallon; 
+      var milesDriven = parseFloat(prompt("What is your total number of miles diven?"));
+      document.write("I have driven <span>" + milesDriven + "</span> miles.");
+      
+      var gallonsConsumed = parseFloat(prompt("What is the number of gallons consumed?"));
+      document.write("<br>I expanded <span>" + gallonsConsumed + "</span> gallons of gas.");
+
+      milesPerGallon (milesDriven, gallonsConsumed);
+      
+      document.write("<br>My car gets about <span>" + milesPerGallon.toFixed(2) + "</span> miles per gallon of gas.");     
+      
+    </script>
+    
+  </body>
+</html>
+      

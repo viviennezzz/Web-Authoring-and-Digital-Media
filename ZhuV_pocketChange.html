@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Pocket Change</title>
+  </head>
+  
+  <style>
+    
+  body
+  {
+    background-color: #6797E1;
+    color: #871283;
+    font-size: 28pt;
+  }
+    
+    span
+    {
+      color: #00008B;
+    }
+  
+  </style>
+  <body>
+
+    <script>
+      
+      var numberOfHalfDollar, numberOfQuarters, numberOfDimes, numberOfNickels, numberOfPennies;
+      var halfDollar = 0.50, quarter = 0.25, dime = 0.10, nickel = 0.05, penny = 0.01; 
+     
+      var total = parseFloat(prompt("How much change do you have in your pocket?"));
+      document.write("<br>I have $" + total + " in my pocket.");
+    
+          
+      if(total >= halfDollar){
+        numberOfHalfDollar = parseInt(total / halfDollar);
+      }
+      else{
+        numberOfHalfDollar = 0;
+      }   
+    
+      total = (total - numberOfHalfDollar * halfDollar).toFixed(2);
+      
+      if(total >= quarter){
+        numberOfQuarters = parseInt(total / quarter);
+      }
+      else{
+        numberOfQuarters = 0;
+      }
+        
+      total = (total - numberOfQuarters * quarter).toFixed(2);
+       
+      if(total >= dime){
+        numberOfDimes = parseInt(total / dime);
+      }
+      else{
+        numberOfDimes = 0;
+      }
+      
+      total = (total - numberOfDimes * dime).toFixed(2);
+      
+      if(total >= nickel){
+        numberOfNickels = parseInt(total / nickel);
+      }
+      else{
+        numberOfNickels = 0;
+      }
+      
+      total = (total - numberOfNickels * nickel).toFixed(2);
+      
+      if(total >= penny){
+        numberOfPennies = parseInt(total / penny);
+      }
+      else{
+        numberOfPennies = 0;
+      }
+      
+      document.write("<br>There are <span>" + numberOfHalfDollar + "</span> half dollar(s)");
+      document.write("<br>There are <span>" + numberOfQuarters + "</span> quarter(s)");
+      document.write("<br>There are <span>" + numberOfDimes + "</span> dime(s)");
+      document.write("<br>There are <span>" + numberOfNickels + "</span> nickel(s)");
+      document.write("<br>There are <span>" + numberOfPennies + "</span> penny(ies)");        
+      
+    </script>
+  </body>
+</html>
