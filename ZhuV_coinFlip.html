@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Coin Flip 10 Heads</title>
+    <style>
+      img{
+        width: 100px;
+        height:100px;
+      }
+      body{
+        color:blue;
+        background-color:yellow;
+      }
+    
+    </style>
+  </head>
+  
+  <body>
+    <script>
+      /*if the coin flipped is a one, its heads, display the line 
+      flip 1 is heads and then a picture of a head coin 
+      if the coin flipped is a two, its tails, display the line
+      flip 1 s tails and then a icture of a tail coin
+      
+      Continue this until a total of 10 heads has been flipped
+      
+      At the end of it all, display how many times was the coin flipped     
+      */
+    
+      var countHead = 0, count = 1;
+      
+      do{
+        var coin = Math.floor(Math.random()*2+1);        
+        if(coin==1)
+        {
+          document.write("<br>Flip " + count + ": is a head" );
+          document.write("<br><img src='http://cointrackers.com/img/barber-half-dollar.png'>");
+          countHead++;        
+        }
+        else
+        {
+          document.write("<br>Flip " + count + ": is a tail" );
+          document.write("<br><img src='https://www.usmint.gov/images/mint_programs/circulatingCoins/Halfdollar-reverse.png'>");
+        }
+        count++;
+      }
+      while(countHead<10)
+       
+      document.write("<br>You flipped the coin " + (count-1) + " times until you reached 10 heads");
+      
+    
+    </script>
+    
+  </body>
+</html>
