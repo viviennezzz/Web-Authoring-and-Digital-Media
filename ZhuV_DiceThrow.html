@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Dice Throw</title>
+    <style>
+      img{
+        width: 100px;
+        height:100px;
+      }
+      body{
+        color:blue;
+        background-color:pink;
+      }
+    
+    </style>
+  </head>
+  
+  <body>
+    <script>
+      var snakeEyes = 0;
+      for(var roll=1; roll<1000; roll++)
+        {
+          document.write("<br>Roll " + roll + ": ");
+          var dice1 = Math.floor(Math.random() * 6) + 1;
+          document.write("<br>");
+          dice1Num();
+          
+          var dice2 = Math.floor(Math.random() * 6) + 1;
+          dice2Num();  
+          
+          var total = dice1 + dice2;
+          
+          if(total==2)
+            snakeEyes++;
+          
+          if(total==7)
+            break;          
+        }
+      document.write("<br>");
+      document.write("<br>Rolled " + roll + " times before 7 appeared.");
+      if(snakeEyes>0)
+        document.write("<br>Snake eyes were rolled.<br>");
+      else
+        document.write("<br>No snake eyes were rolled.<br>");
+        
+
+      
+        function dice1Num()
+        {
+          if(dice1 == 1)
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/557px-Dice-1-b.svg.png'>");
+          else 
+            if (dice1 == 2) 
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/3/34/Dice-2.svg'>");
+          else 
+            if(dice1 == 3)
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dice-3a.svg/150px-Dice-3a.svg.png'>");
+          else 
+            if(dice1 == 4)
+          document.write("<img src='http://www.clipartkid.com/images/160/time-4-kindergarten-subitizing-building-strong-number-sense-in-yCsR0P-clipart.png'>");
+          else 
+            if(dice1 == 5)
+          document.write("<img src='http://www.clipartkid.com/images/366/making-pattern-cards-is-rather-easy-i-made-these-cards-using-power-5lry4G-clipart.png'>");
+          else
+          document.write("<img src='http://www.clipartkid.com/images/658/subtraction-review-jeopardy-review-game-answer-key-n5gM9A-clipart.png'>");           
+        }
+        
+              
+        function dice2Num()
+        {
+          switch(dice2)
+            {
+          case 1:
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/557px-Dice-1-b.svg.png'>");
+          break;
+          case 2: 
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/3/34/Dice-2.svg'>");
+          break;
+          case 3: 
+          document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dice-3a.svg/150px-Dice-3a.svg.png'>");
+          break;
+          case 4:
+          document.write("<img src='http://www.clipartkid.com/images/160/time-4-kindergarten-subitizing-building-strong-number-sense-in-yCsR0P-clipart.png'>");
+          break;
+          case 5:
+          document.write("<img src='http://www.clipartkid.com/images/366/making-pattern-cards-is-rather-easy-i-made-these-cards-using-power-5lry4G-clipart.png'>");
+          break;
+          default:
+          document.write("<img src='http://www.clipartkid.com/images/658/subtraction-review-jeopardy-review-game-answer-key-n5gM9A-clipart.png'>");   
+            }
+        }      
+        
+    
+    </script>
+    
+  </body>
+</html>
